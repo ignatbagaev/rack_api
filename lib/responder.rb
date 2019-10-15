@@ -1,5 +1,3 @@
-require 'json'
-
 class Responder
   class << self
     def respond(status, body)

@@ -1,5 +1,7 @@
 require 'byebug'
 require 'sequel'
+require 'json'
+
 require './db/setup'
 require './lib/router'
 require './lib/dispatcher'
