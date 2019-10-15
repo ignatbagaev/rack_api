@@ -6,9 +6,8 @@ class Router
 
     def route_info(request)
       found_route, path_params = find_route(request.request_method, request.path)
-      return unless found_route
+      controller, action = found_route[:to].split('#') if found_route
 
-      controller, action = found_route[:to].split('#')
       { controller: controller, action: action, params: path_params }
     end
 
