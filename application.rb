@@ -1,3 +1,5 @@
+require 'sequel'
+require './db/setup'
 require './lib/router'
 require './lib/dispatcher'
 
