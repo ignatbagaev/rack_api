@@ -3,6 +3,9 @@ require './db/setup'
 require './lib/router'
 require './lib/dispatcher'
 
+models_files = File.expand_path('./lib/models/*.rb', __dir__)
+Dir.glob(models_files).each { |file| require(file) }
+
 class Application
   def call(env)
     request = Rack::Request.new(env)
